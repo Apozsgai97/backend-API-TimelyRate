@@ -1,6 +1,6 @@
 import express from "express";
 import { createTimetableFeature } from "./features";
-import { Timetable, TimetableDb } from "./features/timetable/types";
+import { Timetable, TimetableDb, Lessons } from "./features/timetable/types";
 import timetables from "./features/timetable/timetables.json";
 
 function createTimetableDb(): TimetableDb {
@@ -8,7 +8,19 @@ function createTimetableDb(): TimetableDb {
   return {
     getAll: async () => data,
     getDay: async (day: string) => {
+      const oneDayTimetable = data.filter((e) => e.day === day);
+      return oneDayTimetable[0];
+    },
+    updateLessons: async (day: string, newLessons: Lessons) => {
      const oneDayTimetable = data.filter((e) => e.day === day);
+     const allowedLessons: (keyof Lessons)[] = ["lesson1", "lesson2", "lesson3", "lesson4"];
+
+     allowedLessons.forEach((lesson) => {
+      if(newLessons[lesson] !== undefined){
+       oneDayTimetable[0].lessons[lesson] = newLessons[lesson]
+      }
+
+     })
      return oneDayTimetable[0];
     }
   };
