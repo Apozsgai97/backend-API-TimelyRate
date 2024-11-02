@@ -1,8 +1,9 @@
 import express from "express";
 import { createTimetableFeature } from "./features";
+import { Timetable, TimetableDb } from "./features/timetable/types";
 
-function createTimetableDb() {
- const data: any = [];
+function createTimetableDb(): TimetableDb {
+ const data: Timetable[] = [];
  return {
   getAll: async() => data,
  }

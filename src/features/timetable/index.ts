@@ -1,7 +1,8 @@
 import express from "express"
+import { TimetableDb } from "./types";
 
 
-export function createTimetableFeature(db: any){
+export function createTimetableFeature(db: TimetableDb){
   return {
    getRouter(){
     const router = express.Router()
