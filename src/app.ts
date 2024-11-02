@@ -7,6 +7,10 @@ function createTimetableDb(): TimetableDb {
   const data: Timetable[] = timetables;
   return {
     getAll: async () => data,
+    getDay: async (day: string) => {
+     const oneDayTimetable = data.filter((e) => e.day === day);
+     return oneDayTimetable[0];
+    }
   };
 }
 

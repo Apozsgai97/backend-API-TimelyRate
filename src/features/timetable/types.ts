@@ -10,4 +10,5 @@ export type Timetable = {
 
 export type TimetableDb = {
   getAll: () => Promise<Timetable[]>;
+  getDay: (day: string) => Promise<Timetable>;
 };

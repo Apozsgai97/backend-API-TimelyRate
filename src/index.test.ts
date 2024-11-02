@@ -22,3 +22,12 @@ test("GET /api/v1/timetable", async () => {
   deepEqual(result.status, 200);
   deepEqual(result.body, timetables);
 });
+
+test("GET /api/v1/timetable/monday", async () => {
+  const app = createApp();
+
+  const result = await request(app).get("/api/v1/timetable/monday");
+
+  deepEqual(result.status, 200);
+  deepEqual(result.body, timetables[0]);
+});
