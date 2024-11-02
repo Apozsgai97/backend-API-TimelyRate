@@ -1,12 +1,13 @@
 import express from "express";
 import { createTimetableFeature } from "./features";
 import { Timetable, TimetableDb } from "./features/timetable/types";
+import timetables from "./features/timetable/timetables.json";
 
 function createTimetableDb(): TimetableDb {
- const data: Timetable[] = [];
- return {
-  getAll: async() => data,
- }
+  const data: Timetable[] = timetables;
+  return {
+    getAll: async () => data,
+  };
 }
 
 export function createApp() {
@@ -22,7 +23,7 @@ export function createApp() {
 
   const timetableFeature = createTimetableFeature(timetableDb);
 
-  app.use("/api/v1/timetable", timetableFeature.getRouter())
+  app.use("/api/v1/timetable", timetableFeature.getRouter());
 
   return app;
 }
