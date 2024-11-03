@@ -13,4 +13,5 @@ export type RatingDb = {
   getAll: () => Promise<Rating[]>;
   getById: (id: string) => Promise<Rating>;
   addRating: (newRating: Rating) => Promise<Rating[]>;
+  deleteRating: (id: string) => Promise<Rating[] | "Rating was not found">;
 };

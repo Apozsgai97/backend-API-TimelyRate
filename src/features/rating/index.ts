@@ -23,7 +23,15 @@ export function createRatingFeature(db: RatingDb) {
         const year = date.getFullYear();
         const month = String(date.getMonth() + 1).padStart(2, "0");
         const day = String(date.getDate()).padStart(2, "0");
-        const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+        const weekdays = [
+          "Sunday",
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+        ];
         const weekday = weekdays[date.getDay()];
         const newDate = `${year}-${month}-${day} ${weekday}`;
 
@@ -38,7 +46,12 @@ export function createRatingFeature(db: RatingDb) {
           },
         };
 
-        res.status(201).json(await db.addRating(newRating))
+        res.status(201).json(await db.addRating(newRating));
+      });
+
+      router.delete("/:id", async (req, res) => {
+        const id = req.params.id;
+        res.json(await db.deleteRating(id));
       });
 
       return router;
