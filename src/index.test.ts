@@ -60,3 +60,14 @@ test("GET /api/v1/ratings", async () => {
   deepEqual(result.status, 200);
   deepEqual(result.body, ratings);
 });
+
+test("GET /api/v1/ratings/f47ac10b-58cc-4372-a567-0e02b2c3d479", async () => {
+  const app = createApp();
+
+  const result = await request(app).get(
+    "/api/v1/ratings/f47ac10b-58cc-4372-a567-0e02b2c3d479"
+  );
+
+  deepEqual(result.status, 200);
+  deepEqual(result.body, ratings[0]);
+});
