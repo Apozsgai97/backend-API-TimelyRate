@@ -41,6 +41,10 @@ function createRatingDb(): RatingDb {
       const RatingById = data.filter((e) => e.id === id);
       return RatingById[0];
     },
+    addRating: async (newRating: Rating) => {
+     data.push(newRating);
+     return data;
+    }
   };
 }
 
