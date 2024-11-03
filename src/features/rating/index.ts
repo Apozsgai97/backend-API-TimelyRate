@@ -1,5 +1,5 @@
 import express from "express";
-import { RatingDb } from "./types";
+import { Rating, RatingDb } from "./types";
 import { v4 as uuidv4 } from "uuid";
 
 export function createRatingFeature(db: RatingDb) {
@@ -27,7 +27,7 @@ export function createRatingFeature(db: RatingDb) {
         const weekday = weekdays[date.getDay()];
         const newDate = `${year}-${month}-${day} ${weekday}`;
 
-        const newRating = {
+        const newRating: Rating = {
           id: newId,
           date: newDate,
           lessonRatings: {
@@ -38,7 +38,7 @@ export function createRatingFeature(db: RatingDb) {
           },
         };
 
-        res.json(await db.addRating(newRating))
+        res.status(201).json(await db.addRating(newRating))
       });
 
       return router;

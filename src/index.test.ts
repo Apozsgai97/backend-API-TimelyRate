@@ -71,3 +71,20 @@ test("GET /api/v1/ratings/f47ac10b-58cc-4372-a567-0e02b2c3d479", async () => {
   deepEqual(result.status, 200);
   deepEqual(result.body, ratings[0]);
 });
+
+test("POST /api/v1/ratings", async () => {
+  const app = createApp();
+
+  const postResult = await request(app)
+    .post("/api/v1/ratings")
+    .send({
+      lesson1: {
+        lesson1: 1,
+        lesson2: 5,
+        lesson3: 4,
+        lesson4: 3,
+      },
+    });
+
+  deepEqual(postResult.status, 201);
+});
