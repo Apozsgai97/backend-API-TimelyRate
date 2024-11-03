@@ -55,15 +55,15 @@ test("With ratings 4, 4, 4, 5 it gives back a four.", () => {
 });
 
 test("With average 1 gets back the right message", () => {
- const average = 1;
+  const average = 1;
 
- const result = addMessageForAverage(average);
+  const result = addMessageForAverage(average);
 
- deepEqual(
-   result,
-   "Every step counts! Keep going, tomorrow’s a new chance to shine."
- );
-})
+  deepEqual(
+    result,
+    "Every step counts! Keep going, tomorrow’s a new chance to shine."
+  );
+});
 
 test("With average 2 gets back the right message", () => {
   const average = 2;
@@ -108,4 +108,3 @@ test("With average 5 gets back the right message", () => {
     "Outstanding! You’re in the zone – keep reaching for the stars!"
   );
 });
-

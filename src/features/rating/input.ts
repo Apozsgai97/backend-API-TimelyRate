@@ -1,4 +1,4 @@
-import {z} from "zod"
+import { z } from "zod";
 
 export const ratingSchema = z.object({
   lesson1: z.number().positive().max(5),

@@ -57,7 +57,7 @@ export function createRatingFeature(db: RatingDb) {
             lesson4: req.body.lesson4,
           },
           average: average,
-          message: message
+          message: message,
         };
 
         res.status(201).json(await db.addRating(newRating));

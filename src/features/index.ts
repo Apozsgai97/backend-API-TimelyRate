@@ -1,2 +1,2 @@
-export * from "./timetable"
-export * from "./rating"
+export * from "./timetable";
+export * from "./rating";
