@@ -1,4 +1,4 @@
-import { Rating, RatingDb, RatingInput } from "./types";
+import { RatingInput } from "./types";
 
 export function calculateAverageRating({
   lesson1,
