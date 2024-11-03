@@ -2,7 +2,7 @@ import express from "express";
 import { Rating, RatingDb } from "./types";
 import { v4 as uuidv4 } from "uuid";
 import { z } from "zod";
-import { calculateAverageRating } from "./logic";
+import { addMessageForAverage, calculateAverageRating } from "./logic";
 
 const ratingSchema = z.object({
   lesson1: z.number().positive().max(5),
@@ -10,7 +10,6 @@ const ratingSchema = z.object({
   lesson3: z.number().positive().max(5),
   lesson4: z.number().positive().max(5),
 });
-
 
 export function createRatingFeature(db: RatingDb) {
   return {
@@ -27,14 +26,16 @@ export function createRatingFeature(db: RatingDb) {
       });
 
       router.post("/", async (req, res) => {
-        const result = ratingSchema.safeParse(req.body)
+        const result = ratingSchema.safeParse(req.body);
         if (!result.success) {
           res.status(400).json(result.error.issues[0].message);
           return;
         }
 
-        const average = calculateAverageRating(req.body)
-       
+        const average = calculateAverageRating(req.body);
+
+        const message = addMessageForAverage(average);
+
         const newId = uuidv4();
 
         const date = new Date();
@@ -63,6 +64,7 @@ export function createRatingFeature(db: RatingDb) {
             lesson4: req.body.lesson4,
           },
           average: average,
+          message: message
         };
 
         res.status(201).json(await db.addRating(newRating));

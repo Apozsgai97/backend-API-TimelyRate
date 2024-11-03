@@ -32,6 +32,9 @@ export function addMessageForAverage(average: number) {
       message =
         "Outstanding! You’re in the zone – keep reaching for the stars!";
       break;
+    default:
+     message = "Outstanding! You’re in the zone – keep reaching for the stars!";
+     break;
   }
 
   return message;

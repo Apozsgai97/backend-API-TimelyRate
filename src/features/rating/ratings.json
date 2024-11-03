@@ -8,7 +8,8 @@
       "lesson3": 2,
       "lesson4": 4
     },
-    "average": 4
+    "average": 4,
+    "message": "Strong focus! You’re on a great path, keep up the awesome work!"
   },
   {
     "id": "9b2b2f6f-e0a8-4f2d-9f2e-6b1bcb29334e",
@@ -19,7 +20,8 @@
       "lesson3": 5,
       "lesson4": 4
     },
-    "average": 4
+    "average": 4,
+    "message": "Strong focus! You’re on a great path, keep up the awesome work!"
   },
   {
     "id": "3d5933c2-7f41-4a1d-a4a5-86d3182f6e15",
@@ -30,7 +32,8 @@
       "lesson3": 3,
       "lesson4": 5
     },
-    "average": 4
+    "average": 4,
+    "message": "Strong focus! You’re on a great path, keep up the awesome work!"
   },
   {
     "id": "0a61d2a7-34c3-45b9-914f-21bcfd42cf1d",
@@ -41,7 +44,8 @@
       "lesson3": 4,
       "lesson4": 2
     },
-    "average": 4
+    "average": 4,
+    "message": "Strong focus! You’re on a great path, keep up the awesome work!"
   },
   {
     "id": "bdf27b9e-3d26-45d6-b5cb-4e2df1d8af18",
@@ -52,6 +56,7 @@
       "lesson3": 3,
       "lesson4": 1
     },
-    "average": 3
+    "average": 3,
+    "message": "Nice work! You’re building momentum, keep growing each day!"
   }
 ]
