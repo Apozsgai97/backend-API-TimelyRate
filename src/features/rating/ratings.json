@@ -7,7 +7,8 @@
       "lesson2": 5,
       "lesson3": 2,
       "lesson4": 4
-    }
+    },
+    "average": 4
   },
   {
     "id": "9b2b2f6f-e0a8-4f2d-9f2e-6b1bcb29334e",
@@ -17,7 +18,8 @@
       "lesson2": 3,
       "lesson3": 5,
       "lesson4": 4
-    }
+    },
+    "average": 4
   },
   {
     "id": "3d5933c2-7f41-4a1d-a4a5-86d3182f6e15",
@@ -27,7 +29,8 @@
       "lesson2": 4,
       "lesson3": 3,
       "lesson4": 5
-    }
+    },
+    "average": 4
   },
   {
     "id": "0a61d2a7-34c3-45b9-914f-21bcfd42cf1d",
@@ -37,7 +40,8 @@
       "lesson2": 3,
       "lesson3": 4,
       "lesson4": 2
-    }
+    },
+    "average": 4
   },
   {
     "id": "bdf27b9e-3d26-45d6-b5cb-4e2df1d8af18",
@@ -47,6 +51,7 @@
       "lesson2": 5,
       "lesson3": 3,
       "lesson4": 1
-    }
+    },
+    "average": 3
   }
 ]

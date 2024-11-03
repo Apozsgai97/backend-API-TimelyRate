@@ -1,6 +1,6 @@
 import { Rating, RatingDb, RatingInput } from "./types";
 
-export function countAverageRating({
+export function calculateAverageRating({
   lesson1,
   lesson2,
   lesson3,

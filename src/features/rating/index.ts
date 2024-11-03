@@ -2,6 +2,7 @@ import express from "express";
 import { Rating, RatingDb } from "./types";
 import { v4 as uuidv4 } from "uuid";
 import { z } from "zod";
+import { calculateAverageRating } from "./logic";
 
 const ratingSchema = z.object({
   lesson1: z.number().positive().max(5),
@@ -31,6 +32,8 @@ export function createRatingFeature(db: RatingDb) {
           res.status(400).json(result.error.issues[0].message);
           return;
         }
+
+        const average = calculateAverageRating(req.body)
        
         const newId = uuidv4();
 
@@ -59,6 +62,7 @@ export function createRatingFeature(db: RatingDb) {
             lesson3: req.body.lesson3,
             lesson4: req.body.lesson4,
           },
+          average: average,
         };
 
         res.status(201).json(await db.addRating(newRating));

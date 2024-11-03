@@ -7,6 +7,7 @@ export type Rating = {
     lesson3: number;
     lesson4: number;
   };
+  average: number;
 };
 
 export type RatingDb = {

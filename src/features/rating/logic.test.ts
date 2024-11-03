@@ -1,5 +1,5 @@
 import { test } from "node:test";
-import { countAverageRating } from "./logic";
+import { calculateAverageRating } from "./logic";
 import { deepEqual } from "node:assert/strict";
 
 test("With four 5 ratings it gives back a five.", () => {
@@ -10,7 +10,7 @@ test("With four 5 ratings it gives back a five.", () => {
     lesson4: 5,
   };
 
-  const result = countAverageRating(ratingInput);
+  const result = calculateAverageRating(ratingInput);
 
   deepEqual(result, 5);
 });
@@ -23,7 +23,7 @@ test("With ratings 4, 5, 5, 5 it gives back a five.", () => {
     lesson4: 5,
   };
 
-  const result = countAverageRating(ratingInput);
+  const result = calculateAverageRating(ratingInput);
 
   deepEqual(result, 5);
 });
@@ -36,7 +36,7 @@ test("With ratings 4, 4, 5, 5 it still gives back a five.", () => {
     lesson4: 5,
   };
 
-  const result = countAverageRating(ratingInput);
+  const result = calculateAverageRating(ratingInput);
 
   deepEqual(result, 5);
 });
@@ -49,7 +49,7 @@ test("With ratings 4, 4, 4, 5 it gives back a four.", () => {
     lesson4: 5,
   };
 
-  const result = countAverageRating(ratingInput);
+  const result = calculateAverageRating(ratingInput);
 
   deepEqual(result, 4);
 });
