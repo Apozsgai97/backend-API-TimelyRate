@@ -1,14 +1,7 @@
 import express from "express";
 import { TimetableDb } from "./types";
-import { z } from "zod";
 import { Lessons } from "./types";
-
-const lessonsSchema = z.object({
-  lesson1: z.string().optional(),
-  lesson2: z.string().optional(),
-  lesson3: z.string().optional(),
-  lesson4: z.string().optional(),
-});
+import { lessonsSchema } from "./input";
 
 export function createTimetableFeature(db: TimetableDb) {
   return {

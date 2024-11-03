@@ -1,15 +1,8 @@
 import express from "express";
 import { Rating, RatingDb } from "./types";
 import { v4 as uuidv4 } from "uuid";
-import { z } from "zod";
 import { addMessageForAverage, calculateAverageRating } from "./logic";
-
-const ratingSchema = z.object({
-  lesson1: z.number().positive().max(5),
-  lesson2: z.number().positive().max(5),
-  lesson3: z.number().positive().max(5),
-  lesson4: z.number().positive().max(5),
-});
+import { ratingSchema } from "./input";
 
 export function createRatingFeature(db: RatingDb) {
   return {
