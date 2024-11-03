@@ -1,6 +1,15 @@
 import express from "express";
 import { Rating, RatingDb } from "./types";
 import { v4 as uuidv4 } from "uuid";
+import { z } from "zod";
+
+const ratingSchema = z.object({
+  lesson1: z.number().positive().max(5),
+  lesson2: z.number().positive().max(5),
+  lesson3: z.number().positive().max(5),
+  lesson4: z.number().positive().max(5),
+});
+
 
 export function createRatingFeature(db: RatingDb) {
   return {
@@ -17,6 +26,12 @@ export function createRatingFeature(db: RatingDb) {
       });
 
       router.post("/", async (req, res) => {
+        const result = ratingSchema.safeParse(req.body)
+        if (!result.success) {
+          res.status(400).json(result.error.issues[0].message);
+          return;
+        }
+       
         const newId = uuidv4();
 
         const date = new Date();
