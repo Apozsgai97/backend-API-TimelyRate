@@ -11,4 +11,5 @@ export type Rating = {
 
 export type RatingDb = {
   getAll: () => Promise<Rating[]>;
+  getById: (id: string) => Promise<Rating>;
 };

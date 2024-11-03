@@ -37,6 +37,10 @@ function createRatingDb(): RatingDb {
   const data: Rating[] = ratings;
   return {
     getAll: async () => data,
+    getById: async (id: string) => {
+      const RatingById = data.filter((e) => e.id === id);
+      return RatingById[0];
+    },
   };
 }
 
