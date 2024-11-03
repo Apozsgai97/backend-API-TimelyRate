@@ -3,6 +3,7 @@ import { createTimetableFeature } from "./features";
 import { Timetable, TimetableDb, Lessons } from "./features/timetable/types";
 import timetables from "./features/timetable/timetables.json";
 import { createRatingFeature } from "./features/rating";
+import { Rating, RatingDb } from "./features/rating/types";
 
 function createTimetableDb(): TimetableDb {
   const data: Timetable[] = timetables;
@@ -31,8 +32,8 @@ function createTimetableDb(): TimetableDb {
   };
 }
 
-function createRatingDb() {
-  const data: any = [];
+function createRatingDb(): RatingDb {
+  const data: Rating[] = [];
   return {
     getAll: async () => data,
   };

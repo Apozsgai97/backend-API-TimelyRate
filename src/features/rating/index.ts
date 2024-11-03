@@ -1,6 +1,7 @@
 import express from "express";
+import { RatingDb } from "./types";
 
-export function createRatingFeature(db: any) {
+export function createRatingFeature(db: RatingDb) {
   return {
     getRouter() {
       const router = express.Router();
