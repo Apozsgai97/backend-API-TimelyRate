@@ -1,47 +1,47 @@
 [
- {
-  "day": "monday",
-  "lessons": {
-    "lesson1": "Arts",
-    "lesson2": "Physical Education",
-    "lesson3": "Numeracy",
-    "lesson4": "Communication"
+  {
+    "day": "monday",
+    "lessons": {
+      "lesson1": "Arts",
+      "lesson2": "Physical Education",
+      "lesson3": "Numeracy",
+      "lesson4": "Communication"
+    }
+  },
+  {
+    "day": "tuesday",
+    "lessons": {
+      "lesson1": "Social-Emotional Learning",
+      "lesson2": "Daily Living Skills",
+      "lesson3": "Vocational Education",
+      "lesson4": "Communication"
+    }
+  },
+  {
+    "day": "wednesday",
+    "lessons": {
+      "lesson1": "Numeracy",
+      "lesson2": "Social-Emotional Learning",
+      "lesson3": "Communication",
+      "lesson4": "Daily Living Skills"
+    }
+  },
+  {
+    "day": "thursday",
+    "lessons": {
+      "lesson1": "Communication",
+      "lesson2": "Physical Education",
+      "lesson3": "Numeracy",
+      "lesson4": "Vocational Education"
+    }
+  },
+  {
+    "day": "friday",
+    "lessons": {
+      "lesson1": "Physical Education",
+      "lesson2": "Vocational Education",
+      "lesson3": "Daily Living Skills",
+      "lesson4": "Arts"
+    }
   }
- },
- {
-  "day": "tuesday",
-  "lessons": {
-    "lesson1": "Social-Emotional Learning",
-    "lesson2": "Daily Living Skills",
-    "lesson3": "Vocational Education",
-    "lesson4": "Communication"
-  }
- },
- {
-  "day": "wednesday",
-  "lessons": {
-    "lesson1": "Numeracy",
-    "lesson2": "Social-Emotional Learning",
-    "lesson3": "Communication",
-    "lesson4": "Daily Living Skills"
-  }
- },
- {
-  "day": "thursday",
-  "lessons": {
-    "lesson1": "Communication",
-    "lesson2": "Physical Education",
-    "lesson3": "Numeracy",
-    "lesson4": "Vocational Education"
-  }
- },
- {
-  "day": "friday",
-  "lessons": {
-    "lesson1": "Physical Education",
-    "lesson2": "Vocational Education",
-    "lesson3": "Daily Living Skills",
-    "lesson4": "Arts"
-  }
- }
 ]

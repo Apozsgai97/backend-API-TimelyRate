@@ -4,7 +4,7 @@ import { Timetable, TimetableDb, Lessons } from "./features/timetable/types";
 import timetables from "./features/timetable/timetables.json";
 import { createRatingFeature } from "./features/rating";
 import { Rating, RatingDb } from "./features/rating/types";
-import ratings from "./features/rating/ratings.json"
+import ratings from "./features/rating/ratings.json";
 
 function createTimetableDb(): TimetableDb {
   const data: Timetable[] = timetables;

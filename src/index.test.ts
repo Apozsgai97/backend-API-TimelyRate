@@ -3,6 +3,7 @@ import { createApp } from "./app";
 import request from "supertest";
 import { deepEqual } from "node:assert";
 import timetables from "./features/timetable/timetables.json";
+import ratings from "./features/rating/ratings.json";
 
 
 test("GET /", async () => {
@@ -49,4 +50,13 @@ test("PUT /api/v1/timetable/monday", async () => {
       lesson4: "Communication",
     },
   });
+});
+
+test("GET /api/v1/ratings", async () => {
+  const app = createApp();
+
+  const result = await request(app).get("/api/v1/ratings");
+
+  deepEqual(result.status, 200);
+  deepEqual(result.body, ratings);
 });
