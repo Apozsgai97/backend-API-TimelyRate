@@ -9,6 +9,8 @@ My big picture plan:
 
 ## Project idea
 
+<a href="https://www.youtube.com/watch?v=Dfia2RSpTlI"> You can watch a walkthrough video here! </a>
+
 During my time as a teacher in Special Education, I placed a strong focus on self-reflection and developing daily habits with my students. I believed it was essential for students to assess their own performance, allowing teachers to provide meaningful feedback afterward. Inspired by this approach, I set out to create an application that facilitates a personal rating system, enabling students to track their progress while offering better organization through timetables. 
 
 ## Used concepts
